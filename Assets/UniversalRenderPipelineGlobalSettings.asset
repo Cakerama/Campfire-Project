@@ -65,8 +65,13 @@ MonoBehaviour:
       - rid: 2210937111895605253
       - rid: 2210937111895605254
       - rid: 2210937111895605255
+<<<<<<< Updated upstream
       - rid: 8373773454825226327
       - rid: 8373773454825226328
+=======
+      - rid: 8373773454825226311
+      - rid: 8373773454825226312
+>>>>>>> Stashed changes
     m_RuntimeSettings:
       m_List: []
   m_AssetVersion: 10
@@ -380,12 +385,20 @@ MonoBehaviour:
         m_ExportShaderVariants: 1
         m_ShaderVariantLogLevel: 0
         m_StripRuntimeDebugShaders: 1
+<<<<<<< Updated upstream
     - rid: 8373773454825226327
+=======
+    - rid: 8373773454825226311
+>>>>>>> Stashed changes
       type: {class: URPTerrainShaderSetting, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         m_Version: 0
         m_IncludeTerrainShaders: 1
+<<<<<<< Updated upstream
     - rid: 8373773454825226328
+=======
+    - rid: 8373773454825226312
+>>>>>>> Stashed changes
       type: {class: UniversalRenderPipelineRuntimeTerrainShaders, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
         m_Version: 0
