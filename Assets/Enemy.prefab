@@ -60,8 +60,8 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &3410280207808775784
 BoxCollider2D:
@@ -93,11 +93,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.3235411, y: 0.0747267}
+  m_Offset: {x: -0.064574435, y: 0.0747267}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3529178, y: 0.34518743}
+  m_Size: {x: 0.34518746, y: 0.34518743}
   m_EdgeRadius: 0
 --- !u!212 &252221038215322145
 SpriteRenderer:
@@ -154,8 +154,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1286513751
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3062661959904479895, guid: 7f218057853e1394f9b4b81616b1d68d, type: 3}
@@ -185,7 +185,10 @@ MonoBehaviour:
   findRadius: 10
   PlayerLayer:
     serializedVersion: 2
-    m_Bits: 2176
+    m_Bits: 2048
+  acccooldown: 0
+  cooldown: 0
+  DeadZone: 0.2
   health: 0
 --- !u!114 &280727853201509849
 MonoBehaviour:
