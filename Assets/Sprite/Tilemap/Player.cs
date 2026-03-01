@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using NUnit.Framework;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class Player : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
 
-    public float health;
+    public float health = 100;
 
     public float immuneTimer;
 
@@ -20,7 +21,9 @@ public class Player : MonoBehaviour
     public bool nearChest;
     public LayerMask chestLayer;
 
-    public TMP_Text ChestText;
+    public GameObject ChestText;
+
+    public GameObject enemy;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,20 +41,28 @@ public class Player : MonoBehaviour
         // check around player for a chest using a circle cast
         float castRadius = 2f;
         RaycastHit2D chestHit = Physics2D.CircleCast(transform.position, castRadius, Vector2.zero, 0f, chestLayer);
-        nearChest = hit.collider != null;
+        //nearChest = chestHit.collider != null;
 
-        if (chestHit)
+        if (chestHit.collider != null)
         {
-            ChestText.enabled = true;
+            ChestText.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
+                Chest hitChest=chestHit.collider.gameObject.GetComponent<Chest>();
+                hitChest.openChest();
             }
         }
         else
         {
-            ChestText.enabled = false;
+            ChestText.SetActive(false);
+        }
+
+
+        if(Input.GetKeyDown(KeyCode.T) && playerInv.inventory.Count >=1)
+        {
+            Instantiate(enemy);
+            playerInv.inventory.RemoveAt(0);
         }
 
     }
@@ -66,6 +77,15 @@ public class Player : MonoBehaviour
             item.gameObject.SetActive(false);
 
 
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 6)
+        {
+            health-=10;
+            Debug.Log("Health " + health);
         }
     }
 }

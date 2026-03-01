@@ -13,11 +13,11 @@ TagManager:
   - Water
   - UI
   - ContactDamage
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Chest
+  - Enemy
+  - Ground
+  - Friendly
+  - Player
   - 
   - 
   - 
