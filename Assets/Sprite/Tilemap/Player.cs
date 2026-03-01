@@ -2,8 +2,8 @@ using JetBrains.Annotations;
 using NUnit.Framework;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Callbacks;
+// using UnityEditor;
+// using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class Player : MonoBehaviour
